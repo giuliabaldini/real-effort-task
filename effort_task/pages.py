@@ -4,8 +4,12 @@ from .models import Constants
 
 
 class Instructions(Page):
-    form_model = ['player']
+    form_model = 'player'
     form_fields = ['consent']
+
+    def vars_for_template(self):
+        email = 'abab@email.com'
+        return {'email': email, 'participation': self.session.config['participation_fee']}
 
     def error_message(self, values):
         if values['consent'] == 0:

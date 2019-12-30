@@ -6,9 +6,25 @@
 {% endblock %}
 
 {% block content %}
+    <p>
+        The results from this experiment will be used in a research project. It is therefore important that you
+        carefully read and follow all instructions. Note that you will remain anonymous throughout the
+        experiment. We will only use your Worker ID to assign payments and check that you have not
+        participated in this experiment before.
+    </p>
+    <p>
+        You will be paid a fixed participation fee of {{ participation }} and you may, depending on the actions you and
+        others take, eam additional money.
+    </p>
+    <p>
+        You will be given detailed instructions on your screen before each part of the experiment. Please read
+        the instructions to each part carefully.
+    </p>
+    <p>
+        If you have any questions regarding this experiment, you may contact {{ email }}.
+    </p>
 
-
-    {% for field in formfields %}
+    {% for field in form %}
         {% formfield field %}
     {% endfor %}
 

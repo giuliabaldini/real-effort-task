@@ -9,7 +9,6 @@ from otree.api import (
     currency_range,
 )
 
-
 author = 'Your name here'
 
 doc = """
@@ -32,4 +31,10 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    pass
+    consent = models.IntegerField(initial=None,
+                                  choices=[
+                                      [1, 'Yes'],
+                                      [0, 'No'],
+                                  ],
+                                  verbose_name='I have read and understood the the above and want to participate in this study.',
+                                  widget=widgets.RadioSelectHorizontal())

@@ -11,20 +11,20 @@ SESSION_CONFIG_DEFAULTS = dict(
 
 SESSION_CONFIGS = [
     dict(
-       name='effort_task',
-       display_name="Effort",
-       num_demo_participants=3,
-       app_sequence=['effort_task']
+        name='effort_task',
+        display_name="Effort",
+        num_demo_participants=3,
+        app_sequence=['effort_task'],
+        participation_fee=2,
     ),
 ]
-
 
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
 LANGUAGE_CODE = 'en'
 
 # e.g. EUR, GBP, CNY, JPY
-REAL_WORLD_CURRENCY_CODE = 'USD'
+REAL_WORLD_CURRENCY_CODE = 'EUR'
 USE_POINTS = True
 
 ROOMS = []
