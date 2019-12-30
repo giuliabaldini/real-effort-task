@@ -3,6 +3,7 @@ staticfiles
 ./db.sqlite3
 .idea
 *~
+_*
 *.sqlite3
 _static_root
 _bots*s

@@ -2,10 +2,15 @@
 {% load otree static %}
 
 {% block title %}
-    Page title
+    General Instructions
 {% endblock %}
 
 {% block content %}
+
+
+    {% for field in formfields %}
+        {% formfield field %}
+    {% endfor %}
 
     {% next_button %}
 
