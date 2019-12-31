@@ -14,7 +14,10 @@ SESSION_CONFIGS = [
         name='effort_task',
         display_name="Effort",
         num_demo_participants=3,
-        app_sequence=['introduction', 'assignment1'],
+        app_sequence=[
+            # 'introduction',
+            'assignment1'
+        ],
         participation_fee=2,
     ),
 ]

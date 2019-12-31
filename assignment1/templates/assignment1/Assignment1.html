@@ -1,11 +1,41 @@
 {% extends "global/Page.html" %}
 {% load otree static %}
 
+{% block scripts %}
+    <script src="{% static 'global/js/timeout.js' %}"></script>
+{% endblock %}
+
+{% block styles %}
+    <style type="text/css">
+        div > span {
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        .squared {
+            border: 3px solid #FF0000;
+            padding: 1em;
+        }
+    </style>
+{% endblock %}
+
 {% block title %}
-    Instructions
+    Assignment 1
 {% endblock %}
 
 {% block content %}
+    <input type="hidden" id="myVar" name="variable" value="{{ expiry_current }}">
+
+    <p id="demo"></p>
+
+    <div>
+        <span class="squared">
+            {{ sentence }}
+        </span>
+    </div>
+    {% for field in form %}
+        {% formfield field %}
+    {% endfor %}
 
 
     {% next_button %}

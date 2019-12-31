@@ -19,8 +19,17 @@ Your app description
 class Constants(BaseConstants):
     name_in_url = 'assignment1'
     players_per_group = None
-    instructions = True
+    total_minutes = 5
+    seconds_per_round = 20
     sentences = [
+        "bag books sky of a",
+        "sky blue is the old",
+        "bag books sky of a",
+        "sky blue is the old",
+        "bag books sky of a",
+        "sky blue is the old",
+        "bag books sky of a",
+        "sky blue is the old",
         "bag books sky of a",
         "sky blue is the old"
     ]
@@ -37,4 +46,4 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    pass
+    user_text = models.StringField(verbose_name='Please form a sentence of four words with the above words.')
