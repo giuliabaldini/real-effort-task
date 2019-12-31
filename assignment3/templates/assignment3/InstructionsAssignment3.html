@@ -1,0 +1,41 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block styles %}
+
+    <style type="text/css">
+        .sentence {
+            margin-left: 1vw;
+        }
+    </style>
+{% endblock %}
+
+{% block title %}
+    Instructions Assignment 1
+{% endblock %}
+
+{% block content %}
+    <p>
+        In the first assignment you are asked to work on a sentence unscrambling task tor 5 minutes. Your
+        performance will not be measured as there is no right or wrong answer, but we do ask you to work
+        continuously on this assignment.
+    </p>
+    <span><b>Description of the assignment:</b></span>
+    <p>
+        You will be shown five English words and are asked to form a sentence or an expression by using four
+        of these words. This means that each sentence or expression must only contain four words.
+    </p>
+    <p>
+        For example, it the words given to you are <b>"sky, blue, is, the, old"</b>, then you can construct the
+        following sentence:
+    </p>
+    <p class="sentence">the sky is blue</p>
+    <p>
+        Write the sentence or expression that you form into the blank space using your keyboard. Your answer
+        will be submitted automatically after 20 seconds and you will auto-advance to five new words.
+        This assignment will last for 5 minutes and we ask you to work continuously. When you have read and
+        understood the instructions press Next to start the assignment.
+    </p>
+
+    {% next_button %}
+
+{% endblock %}

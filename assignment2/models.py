@@ -20,6 +20,7 @@ class Constants(BaseConstants):
     name_in_url = 'effort_task'
     players_per_group = None
     num_rounds = 1
+    general_instructions = True
 
 
 class Subsession(BaseSubsession):

@@ -14,7 +14,7 @@ SESSION_CONFIGS = [
         name='effort_task',
         display_name="Effort",
         num_demo_participants=3,
-        app_sequence=['effort_task'],
+        app_sequence=['introduction', 'assignment1'],
         participation_fee=2,
     ),
 ]
@@ -25,7 +25,7 @@ LANGUAGE_CODE = 'en'
 
 # e.g. EUR, GBP, CNY, JPY
 REAL_WORLD_CURRENCY_CODE = 'EUR'
-USE_POINTS = True
+USE_POINTS = False
 
 ROOMS = []
 

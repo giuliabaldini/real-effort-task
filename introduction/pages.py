@@ -7,6 +7,9 @@ class Instructions(Page):
     form_model = 'player'
     form_fields = ['consent']
 
+    def is_displayed(self):
+        return Constants.general_instructions
+
     def vars_for_template(self):
         email = 'abab@email.com'
         return {'email': email, 'participation': self.session.config['participation_fee']}
@@ -16,36 +19,10 @@ class Instructions(Page):
             return "You must consent to participate in the study."
 
 
-class Assignment1(Page):
-    pass
-
-
-class Assignment2(Page):
-    pass
-
-
-class Assignment3(Page):
-    pass
-
-
-class Assignment4(Page):
-    pass
-
-
-class ResultsWaitPage(WaitPage):
-    def after_all_players_arrive(self):
-        pass
-
-
-class Results(Page):
+class Part1(Page):
     pass
 
 
 page_sequence = [
     Instructions,
-    Assignment1,
-    Assignment2,
-    Assignment3,
-    Assignment4,
-    ResultsWaitPage,
-    Results]
+    Part1]
