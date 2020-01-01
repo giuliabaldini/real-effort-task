@@ -12,15 +12,25 @@ SESSION_CONFIG_DEFAULTS = dict(
 SESSION_CONFIGS = [
     dict(
         name='effort_task',
-        display_name="Effort",
+        display_name="Real Effort Task",
         num_demo_participants=3,
         app_sequence=[
-            # 'introduction',
-            # 'assignment1',
-            # 'assignment3',
+            'introduction',
+            'assignment1',
+            'assignment3',
             'payments'
         ],
         participation_fee=2,
+        task_1_high_win=6,
+        task_1_low_win=0,
+        task_3_high_win=6,
+        task_3_low_win=0,
+        redistribution_high=6,
+        redistribution_low=0,
+        inc_1=1,
+        dec_1=1,
+        inc_2=1,
+        dec_2=2,
     ),
 ]
 

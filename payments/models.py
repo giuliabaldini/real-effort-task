@@ -9,10 +9,10 @@ from otree.api import (
     currency_range,
 )
 
-author = 'Your name here'
+author = 'Giulia Baldini'
 
 doc = """
-Your app description
+Computes the payments for the Real Effort task.
 """
 
 
@@ -20,7 +20,6 @@ class Constants(BaseConstants):
     name_in_url = 'payments'
     players_per_group = None
     num_rounds = 1
-    general_instructions = True
 
 
 class Subsession(BaseSubsession):
@@ -32,4 +31,6 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    pass
+    feedback = models.StringField(
+        verbose_name="Finally, if you have any comments or suggestions related to this experiment please write them"
+                     " down in the blank space below. Your feedback is very important to improve our research.")

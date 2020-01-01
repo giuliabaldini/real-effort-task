@@ -17,6 +17,8 @@ class Assignment1(Page):
     form_fields = ['user_text']
 
     timeout_seconds = Constants.seconds_per_round
+    timer_text = 'Time left for this sentence:'
+
     '''
     def get_timeout_seconds(self):
         return self.participant.vars['expiry_total'] - time.time()
@@ -30,7 +32,17 @@ class Assignment1(Page):
         current_sentence = Constants.task_1[self.player.round_number - 1]
         return {'sentence': current_sentence}
 
+    def before_next_page(self):
+        self.player.add_payoff()
+
+
+class Completed1(Page):
+    def is_displayed(self):
+        return self.player.round_number == Constants.num_rounds
+
 
 page_sequence = [
     InstructionsAssignment1,
-    Assignment1]
+    Assignment1,
+    Completed1,
+]

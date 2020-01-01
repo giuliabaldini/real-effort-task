@@ -6,11 +6,10 @@
 {% endblock %}
 
 {% block content %}
-    <p>
-        Finally, if you have any comments or suggestions related to this experiment please write them down in
-        the blank space below. Your feedback is very important to improve our research.
-    </p>
-    Add field
+    {% for field in form %}
+        {% formfield field %}
+    {% endfor %}
+
 
 {% endblock %}
 

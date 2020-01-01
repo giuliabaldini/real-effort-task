@@ -10,11 +10,25 @@ class ResultsWaitPage(WaitPage):
 
 class Payments(Page):
     def vars_for_template(self):
-        return {'min_draw': c(0), 'max_draw': c(6), 'high_score': c(6), 'low_score': c(0),
-                'red_high': c(6), 'red_low': c(0), 'unit': c(1), 'ass_two': c(2),
+        return {'min_draw': c(self.participant.session.config['task_1_low_win']),
+                'max_draw': c(self.participant.session.config['task_1_high_win']),
+                'high_score': c(self.participant.session.config['task_1_high_win']),
+                'low_score': c(self.participant.session.config['task_1_low_win']),
+                'red_high': c(self.participant.session.config['redistribution_high']),
+                'red_low': c(self.participant.session.config['redistribution_low']),
+                'inc_1': c(self.participant.session.config['inc_1']),
+                'dec_1': c(self.participant.session.config['dec_1']),
+                'inc_2': c(self.participant.session.config['inc_2']),
+                'dec_2': c(self.participant.session.config['dec_2']),
                 'participation': self.session.config['participation_fee']}
+
+
+class Feedback(Page):
+    form_model = 'player'
+    form_fields = ['feedback']
 
 
 page_sequence = [
     # ResultsWaitPage,
-    Payments]
+    Payments,
+    Feedback]

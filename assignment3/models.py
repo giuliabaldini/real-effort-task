@@ -20,6 +20,10 @@ class Constants(BaseConstants):
     name_in_url = 'assignment3'
     players_per_group = None
 
+    total_minutes = 5  # Total duration
+    seconds_per_round = 20  # Duration of one round
+
+    # TODO: Change this to change the example
     example = [123, 231, 952, 864, 123, 791, 283, 123, 641, 820, 462, 123]
 
     task_3_nums = {  # TODO: Add the correct numbers for every round
