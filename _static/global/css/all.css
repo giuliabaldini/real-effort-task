@@ -1,5 +1,18 @@
-.sentence {
+.highlight {
     border: 3px solid #FF0000;
     padding: 1em;
     display: inline-block;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    height: 3vh;
+    box-sizing: border-box;
+    max-width: 50%;
 }

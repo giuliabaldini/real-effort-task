@@ -21,7 +21,7 @@ class Constants(BaseConstants):
     players_per_group = None
     total_minutes = 5
     seconds_per_round = 20
-    sentences = [
+    task_1 = [
         "bag books sky of a",
         "sky blue is the old",
         "bag books sky of a",
@@ -34,7 +34,7 @@ class Constants(BaseConstants):
         "sky blue is the old"
     ]
 
-    num_rounds = len(sentences)
+    num_rounds = len(task_1)
 
 
 class Subsession(BaseSubsession):

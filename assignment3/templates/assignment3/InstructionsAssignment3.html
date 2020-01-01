@@ -1,41 +1,65 @@
 {% extends "global/Page.html" %}
 {% load otree static %}
+
+
+{% block scripts %}
+    <script>
+        $("label:contains('123')").css("color", "red");
+    </script>
+
+{% endblock %}
+
 {% block styles %}
 
     <style type="text/css">
-        .sentence {
-            margin-left: 1vw;
+        .checkboxes {
+            height: 20vh;
         }
     </style>
+    <link href="{% static 'global/css/all.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block title %}
-    Instructions Assignment 1
+    Instructions Assignment 3
 {% endblock %}
 
 {% block content %}
+
     <p>
-        In the first assignment you are asked to work on a sentence unscrambling task tor 5 minutes. Your
-        performance will not be measured as there is no right or wrong answer, but we do ask you to work
-        continuously on this assignment.
+        In the third assignment you are asked to work on a code recognition task tor 5 minutes. For this
+        assignment we will measure your perfomance by the number points you receive. You will be informed
+        about your score at the end of the assignment.
     </p>
     <span><b>Description of the assignment:</b></span>
     <p>
-        You will be shown five English words and are asked to form a sentence or an expression by using four
-        of these words. This means that each sentence or expression must only contain four words.
+        On top ot the page you will be shown a 3-digit code that you must find and check off from a matrix of 3-
+        digit codes in random order. The assigned code will occur multiple times in the same matrix and you will
+        be given 1 point for each correct marking. You will be subtracted 1 point if you check off a wrong code,
+        but you will not lose any points for failing to check off all occurrences of the correct code.
     </p>
     <p>
-        For example, it the words given to you are <b>"sky, blue, is, the, old"</b>, then you can construct the
-        following sentence:
+        Your matrix will be submitted automatically after 60 seconds and you will auto advance to the next
+        page. This assignment will last tor 5 minutes and after 5 minutes you will be taken to the last part of the
+        survey.
     </p>
-    <p class="sentence">the sky is blue</p>
     <p>
-        Write the sentence or expression that you form into the blank space using your keyboard. Your answer
-        will be submitted automatically after 20 seconds and you will auto-advance to five new words.
-        This assignment will last for 5 minutes and we ask you to work continuously. When you have read and
-        understood the instructions press Next to start the assignment.
+        Below you are shown a simplified example to make sure you understand the assignment. When you
+        nave read ant understood the instructions press Next to start the assignment.
     </p>
 
+    <p>
+        For example, the code you must check off is: 123
+    </p>
+
+    <div class="checkboxes flex-container">
+        {% for field, label in form_label %}
+            <div class="flex-item">
+                <input name={{ field }} type="checkbox" value="1"/>
+                <label for={{ field }}>{{ label }}</label>
+            </div>
+        {% endfor %}
+    </div>
+    {{ form.errors }}
     {% next_button %}
 
 {% endblock %}
