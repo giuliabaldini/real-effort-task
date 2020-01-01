@@ -16,7 +16,9 @@ SESSION_CONFIGS = [
         num_demo_participants=3,
         app_sequence=[
             # 'introduction',
-            'assignment1'
+            'assignment1',
+            'assignment3',
+            'payments'
         ],
         participation_fee=2,
     ),
