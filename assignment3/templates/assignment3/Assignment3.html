@@ -36,7 +36,7 @@
     <div class="checkboxes flex-container">
         {% for field, label in form_label %}
             <div class="flex-item">
-                <input name={{ field }} type="checkbox" value="1"/>
+                <input name={{ field }} id={{ field }} type="checkbox" value="1"/>
                 <label for={{ field }}>{{ label }}</label>
             </div>
         {% endfor %}

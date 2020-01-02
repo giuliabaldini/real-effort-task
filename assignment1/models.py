@@ -27,14 +27,6 @@ class Constants(BaseConstants):
     task_1 = [  # TODO: Change these to change the different sentences
         "bag books sky of a",
         "sky blue is the old",
-        "bag books sky of a",
-        "sky blue is the old",
-        "bag books sky of a",
-        "sky blue is the old",
-        "bag books sky of a",
-        "sky blue is the old",
-        "bag books sky of a",
-        "sky blue is the old",
     ]
 
     num_rounds = len(task_1)
