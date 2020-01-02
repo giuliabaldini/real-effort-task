@@ -10,7 +10,6 @@ class ResultsWaitPage(WaitPage):
         self.group.compute_payoffs()
 
 
-
 class Completed3(Page):
     def is_displayed(self):
         return self.player.round_number == Constants.num_rounds

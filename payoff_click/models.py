@@ -25,7 +25,15 @@ class Constants(BaseConstants):
 
 
 class Subsession(BaseSubsession):
-    pass
+
+    def group_by_arrival_time_method(self, waiting_players):
+
+        players_scores = [p.participant.vars['player_score'] for p in waiting_players]
+        for i in range(0, len(players_scores)):
+            for j in range(i + 1, len(players_scores)):
+                if players_scores[i] != players_scores[j]:
+                    return [waiting_players[i], waiting_players[j]]
+        print('not enough players to create a group')
 
 
 class Group(BaseGroup):
@@ -35,7 +43,7 @@ class Group(BaseGroup):
 
         p1 = self.get_players()[0]
         p2 = self.get_players()[1]
-        if random.randint(0, 1):
+        if p1.participant.vars['player_score'] > p2.participant.vars['player_score']:
             p1.participant.vars['ass3_payoff'] = high_win
             p2.participant.vars['ass3_payoff'] = low_win
         else:
