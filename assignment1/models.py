@@ -21,7 +21,7 @@ class Constants(BaseConstants):
     name_in_url = 'assignment1'
     players_per_group = None
 
-    total_minutes = 1  # Total duration
+    total_minutes = 5  # Total duration
     seconds_per_round = 20  # Duration of one round
 
     task_1 = [  # TODO: Change these to change the different sentences
@@ -52,12 +52,9 @@ class Player(BasePlayer):
     user_text = models.StringField(verbose_name='Please form a sentence of four words with the above words.')
 
     def add_payoff(self):
-        curr_payoff = 0
+        curr_payoff = c(0)
         high_win = c(self.session.config['task_1_high_win'])
         low_win = c(self.session.config['task_1_low_win'])
-        if self.user_text != 0:
-            curr_payoff = high_win if random.random() else low_win
-        if 'payoff_array' in self.participant.vars:
-            self.participant.vars['payoff_array'].append(curr_payoff)
-        else:
-            self.participant.vars['payoff_array'] = [curr_payoff]
+        if self.user_text != 'NULL' and self.user_text != '':
+            curr_payoff = high_win if random.randint(0, 1) else low_win
+        self.participant.vars['payoff_assignment'] = curr_payoff

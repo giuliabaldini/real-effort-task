@@ -7,7 +7,9 @@
 
 {% block styles %}
     <style type="text/css">
-
+        .highlight {
+            display: inline-block;
+        }
     </style>
 
     <link href="{% static 'global/css/all.css' %}" rel="stylesheet">
@@ -21,7 +23,7 @@
 {% block content %}
     <input type="hidden" id="hidden_time" value="{{ expiry_total }}">
 
-    <div class="alert alert-warning">
+    <div id="custom-timer" class="alert alert-warning">
         <p>
             Time left for this task: <span class="timer_total" style="font-weight: bold"></span>
         </p>

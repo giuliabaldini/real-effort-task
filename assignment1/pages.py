@@ -30,13 +30,13 @@ class Assignment1(Page):
         current_sentence = Constants.task_1[self.player.round_number - 1]
         return {'sentence': current_sentence, 'expiry_total': self.participant.vars['expiry_total']}
 
-    def before_next_page(self):
-        self.player.add_payoff()
-
 
 class Completed1(Page):
     def is_displayed(self):
         return self.player.round_number == Constants.num_rounds
+
+    def before_next_page(self):
+        self.player.add_payoff()
 
 
 page_sequence = [
