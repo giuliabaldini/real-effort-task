@@ -15,8 +15,8 @@ SESSION_CONFIGS = [
         display_name="Real Effort Task",
         num_demo_participants=3,
         app_sequence=[
-            # 'introduction',
-            # 'assignment1',
+            'introduction',
+            'assignment1',
             'assignment3',
             'payments'
         ],
