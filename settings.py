@@ -16,7 +16,7 @@ SESSION_CONFIGS = [
         num_demo_participants=3,
         app_sequence=[
             # 'introduction',
-            #'assignment1',
+            # 'assignment1',
             'assignment3',
             'payments'
         ],
@@ -48,7 +48,7 @@ ADMIN_USERNAME = 'admin'
 # for security, best to set admin password in an environment variable
 ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
 
-DEMO_PAGE_INTRO_HTML = """ """
+# DEMO_PAGE_INTRO_HTML = """ """
 
 SECRET_KEY = 'mln9uy&2yx!1o(5n5@#1lqw50ft+t570d#c%-%a)li)f-@9u07'
 
