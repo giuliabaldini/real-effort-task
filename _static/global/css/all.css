@@ -15,3 +15,7 @@
     box-sizing: border-box;
     max-width: 50%;
 }
+
+.tofix {
+    color: red;
+}

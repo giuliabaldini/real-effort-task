@@ -31,16 +31,8 @@ class Assignment1(Page):
         return {'sentence': current_sentence, 'expiry_total': self.participant.vars['expiry_total']}
 
 
-class Completed1(Page):
-    def is_displayed(self):
-        return self.player.round_number == Constants.num_rounds
-
-    def before_next_page(self):
-        self.player.add_payoff()
-
 
 page_sequence = [
     InstructionsAssignment1,
     Assignment1,
-    Completed1,
 ]

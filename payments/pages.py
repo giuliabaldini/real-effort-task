@@ -2,12 +2,6 @@ from otree.api import Currency as c, currency_range
 from ._builtin import Page, WaitPage
 from .models import Constants
 
-
-class ResultsWaitPage(WaitPage):
-    def after_all_players_arrive(self):
-        pass
-
-
 class Payments(Page):
     def vars_for_template(self):
         return {'min_draw': c(self.participant.session.config['task_1_low_win']),
@@ -29,6 +23,5 @@ class Feedback(Page):
 
 
 page_sequence = [
-    # ResultsWaitPage,
     Payments,
     Feedback]

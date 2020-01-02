@@ -9,10 +9,12 @@ from otree.api import (
     currency_range,
 )
 
+import random
+
 author = 'Giulia Baldini'
 
 doc = """
-Computes the payments for the Real Effort task.
+Computes the matchings for the Real Effort task.
 """
 
 
@@ -31,6 +33,6 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    feedback = models.StringField(
+    feedback = models.LongStringField(
         verbose_name="Finally, if you have any comments or suggestions related to this experiment please write them"
                      " down in the blank space below. Your feedback is very important to improve our research.")

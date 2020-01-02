@@ -33,7 +33,8 @@ class Constants(BaseConstants):
 
 
 class Subsession(BaseSubsession):
-    pass
+    def creating_session(self):
+        self.group_randomly()
 
 
 class Group(BaseGroup):
@@ -42,11 +43,3 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     user_text = models.StringField(verbose_name='Please form a sentence of four words with the above words.')
-
-    def add_payoff(self):
-        curr_payoff = c(0)
-        high_win = c(self.session.config['task_1_high_win'])
-        low_win = c(self.session.config['task_1_low_win'])
-        if self.user_text != 'NULL' and self.user_text != '':
-            curr_payoff = high_win if random.randint(0, 1) else low_win
-        self.participant.vars['payoff_assignment'] = curr_payoff

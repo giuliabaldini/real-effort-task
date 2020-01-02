@@ -7,6 +7,9 @@
 
 {% block content %}
     <p>
+        <i>Please read the instructions below carefully.</i>
+    </p>
+    <p>
         The results from this experiment will be used in a research project. It is therefore important that you
         carefully read and follow all instructions. Note that you will remain anonymous throughout the
         experiment.
@@ -22,7 +25,7 @@
         the instructions to each part carefully.
     </p>
     <p>
-        If you have any questions regarding this experiment, you may contact {{ email }}.
+        If you have any questions regarding this experiment, you may contact <span class="tofix">{{ email }} cambiare email</span>.
     </p>
 
     {% for field in form %}

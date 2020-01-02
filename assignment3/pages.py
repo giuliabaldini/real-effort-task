@@ -19,9 +19,6 @@ class InstructionsAssignment3(Page):
         return {'form_label': form_label}
 
     def before_next_page(self):
-        curr_nums = Constants.task_3_nums[self.player.round_number]
-        random.shuffle(curr_nums)
-        self.participant.vars['shuffled_nums'] = curr_nums
         self.participant.vars['expiry_total'] = time.time() + Constants.total_minutes * 60
 
 
@@ -41,7 +38,7 @@ class Assignment3(Page):
         return return_fields(Constants.task_3_nums[self.player.round_number])
 
     def vars_for_template(self):
-        curr_nums = self.participant.vars['shuffled_nums']
+        curr_nums = Constants.task_3_nums[self.player.round_number]
         form_label = zip(self.get_form_fields(), curr_nums)
         num = Constants.task_3_find[self.player.round_number - 1]
         return {'form_label': form_label, 'find_num': num, 'expiry_total': self.participant.vars['expiry_total']}
@@ -49,17 +46,7 @@ class Assignment3(Page):
     def before_next_page(self):
         self.player.compute_score()
 
-
-class Completed3(Page):
-    def is_displayed(self):
-        return self.player.round_number == Constants.num_rounds
-
-    def vars_for_template(self):
-        return {'score': self.participant.vars['player_score']}
-
-
 page_sequence = [
     InstructionsAssignment3,
     Assignment3,
-    Completed3
 ]

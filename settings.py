@@ -13,11 +13,13 @@ SESSION_CONFIGS = [
     dict(
         name='effort_task',
         display_name="Real Effort Task",
-        num_demo_participants=3,
+        num_demo_participants=100,
         app_sequence=[
-            'introduction',
+            # 'introduction',
             'assignment1',
+            'payoff_scramble',
             'assignment3',
+            'payoff_click',
             'payments'
         ],
         participation_fee=2,
