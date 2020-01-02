@@ -48,6 +48,9 @@ ADMIN_USERNAME = 'admin'
 # for security, best to set admin password in an environment variable
 ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
 
+OTREE_PRODUCTION = 1
+OTREE_AUTH_LEVEL = DEMO
+
 # DEMO_PAGE_INTRO_HTML = """ """
 
 SECRET_KEY = 'mln9uy&2yx!1o(5n5@#1lqw50ft+t570d#c%-%a)li)f-@9u07'

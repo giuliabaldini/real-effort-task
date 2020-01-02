@@ -102,9 +102,9 @@ class Player(BasePlayer):
             else:
                 if fields[field_id] == 1:
                     current_score -= 1
-        print(current_score)
+        # print(current_score)
 
         if 'player_score' in self.participant.vars:
             self.participant.vars['player_score'] += current_score
         else:
-            self.participant.vars['player_score'] = 0
+            self.participant.vars['player_score'] = current_score
