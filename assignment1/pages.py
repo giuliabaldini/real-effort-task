@@ -19,18 +19,16 @@ class Assignment1(Page):
     timeout_seconds = Constants.seconds_per_round
     timer_text = 'Time left for this sentence:'
 
-    '''
-    def get_timeout_seconds(self):
+    def get_time_left(self):
         return self.participant.vars['expiry_total'] - time.time()
 
     def is_displayed(self):
         # Do not show if there are less than three seconds
-        return self.get_timeout_seconds() > 3
-    '''
+        return self.get_time_left() > 3
 
     def vars_for_template(self):
         current_sentence = Constants.task_1[self.player.round_number - 1]
-        return {'sentence': current_sentence}
+        return {'sentence': current_sentence, 'expiry_total': self.participant.vars['expiry_total']}
 
     def before_next_page(self):
         self.player.add_payoff()

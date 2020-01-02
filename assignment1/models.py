@@ -21,10 +21,18 @@ class Constants(BaseConstants):
     name_in_url = 'assignment1'
     players_per_group = None
 
-    total_minutes = 5  # Total duration
+    total_minutes = 1  # Total duration
     seconds_per_round = 20  # Duration of one round
 
     task_1 = [  # TODO: Change these to change the different sentences
+        "bag books sky of a",
+        "sky blue is the old",
+        "bag books sky of a",
+        "sky blue is the old",
+        "bag books sky of a",
+        "sky blue is the old",
+        "bag books sky of a",
+        "sky blue is the old",
         "bag books sky of a",
         "sky blue is the old",
     ]

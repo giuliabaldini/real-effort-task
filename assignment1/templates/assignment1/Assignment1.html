@@ -19,7 +19,13 @@
 {% endblock %}
 
 {% block content %}
-    <p id="demo"></p>
+    <input type="hidden" id="hidden_time" value="{{ expiry_total }}">
+
+    <div class="alert alert-warning">
+        <p>
+            Time left for this task: <span class="timer_total" style="font-weight: bold"></span>
+        </p>
+    </div>
 
     <span class="highlight">
         {{ sentence }}
