@@ -9,10 +9,10 @@ from otree.api import (
     currency_range,
 )
 
-author = 'Your name here'
+author = 'Giulia Baldini, Maria Bigoni, Marco Fabbri'
 
 doc = """
-Your app description
+Effort task in which the players select the occurrences of a given number in a 17x17 matrix.
 """
 
 

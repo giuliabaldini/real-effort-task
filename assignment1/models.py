@@ -8,12 +8,11 @@ from otree.api import (
     Currency as c,
     currency_range,
 )
-import random
 
-author = 'Your name here'
+author = 'Giulia Baldini, Maria Bigoni, Marco Fabbri'
 
 doc = """
-Your app description
+Effort task in which the players create sentences of four words out of five given words.
 """
 
 

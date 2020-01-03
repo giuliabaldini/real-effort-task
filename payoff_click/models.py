@@ -9,10 +9,10 @@ from otree.api import (
     currency_range,
 )
 
-author = 'Your name here'
+author = 'Giulia Baldini, Maria Bigoni, Marco Fabbri'
 
 doc = """
-Your app description
+WaitPage to create groups and confirm the successful completion of the third task.
 """
 
 

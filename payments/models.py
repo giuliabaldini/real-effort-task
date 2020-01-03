@@ -9,10 +9,10 @@ from otree.api import (
     currency_range,
 )
 
-author = 'Giulia Baldini'
+author = 'Giulia Baldini, Maria Bigoni, Marco Fabbri'
 
 doc = """
-Computes the matchings for the Real Effort task.
+Description of how the payments will be carried out for the effort tasks and possibility to give feedback.
 """
 
 
