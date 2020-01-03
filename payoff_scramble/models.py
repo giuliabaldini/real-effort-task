@@ -35,6 +35,8 @@ class Group(BaseGroup):
 
         p1 = self.get_players()[0]
         p2 = self.get_players()[1]
+        p1.participant.vars['ass1_partner'] = p2.participant.id_in_session
+        p2.participant.vars['ass1_partner'] = p1.participant.id_in_session
         if random.randint(0, 1):
             p1.participant.vars['ass1_payoff'] = high_win
             p2.participant.vars['ass1_payoff'] = low_win
@@ -42,9 +44,15 @@ class Group(BaseGroup):
             p1.participant.vars['ass1_payoff'] = low_win
             p2.participant.vars['ass1_payoff'] = high_win
 
-        for p in self.get_players():
-            print(p.participant.vars)
+        p1.save_matching()
+        p2.save_matching()
 
 
 class Player(BasePlayer):
-    pass
+    matching_info_ass1 = models.LongStringField(initial='')
+
+    def save_matching(self):
+        # TODO: Add more fields if needed
+        relevant = ['ass1_partner', 'ass1_payoff']
+        for r in relevant:
+            self.matching_info_ass1 += str(self.participant.vars[r]) + ","

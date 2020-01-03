@@ -8,8 +8,7 @@ from otree.api import (
     Currency as c,
     currency_range,
 )
-
-import random
+import openpyxl
 
 author = 'Giulia Baldini'
 
@@ -33,6 +32,7 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    feedback = models.LongStringField(
-        verbose_name="Finally, if you have any comments or suggestions related to this experiment please write them"
-                     " down in the blank space below. Your feedback is very important to improve our research.")
+    feedback = models.LongStringField(blank=True,
+                                      verbose_name="Finally, if you have any comments or suggestions related to "
+                                                   "this experiment please write them down in the blank space below. "
+                                                   "Your feedback is very important to improve our research.")

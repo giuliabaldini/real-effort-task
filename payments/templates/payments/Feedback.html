@@ -2,15 +2,14 @@
 {% load otree static %}
 
 {% block title %}
-    Determination of Payments
+    Feedback
 {% endblock %}
 
 {% block content %}
     {% for field in form %}
         {% formfield field %}
     {% endfor %}
-
-
+    {% next_button %}
 {% endblock %}
 
 
