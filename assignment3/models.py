@@ -311,7 +311,7 @@ class Constants(BaseConstants):
 
     # TODO: Add the correct numbers to find
     task_3_find = [909, 439, 773, 155, 266, 648, 676, 356, 237, 765, 912, 112, 268, 721, 640, 633, 275, 107, 486, 211]
-    num_rounds = 1  # len(task_3_find)
+    num_rounds = len(task_3_find)
 
 
 class Subsession(BaseSubsession):

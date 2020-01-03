@@ -15,7 +15,7 @@ SESSION_CONFIGS = [
         display_name="Real Effort Task",
         num_demo_participants=100,
         app_sequence=[
-            # 'introduction',
+            'introduction',
             'assignment1',
             'payoff_scramble',
             'assignment3',
@@ -51,7 +51,8 @@ ADMIN_USERNAME = 'admin'
 ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
 
 OTREE_PRODUCTION = 1
-OTREE_AUTH_LEVEL = 'DEMO'
+# OTREE_AUTH_LEVEL = 'DEMO'
+OTREE_AUTH_LEVEL = 'STUDY'
 
 # DEMO_PAGE_INTRO_HTML = """ """
 
