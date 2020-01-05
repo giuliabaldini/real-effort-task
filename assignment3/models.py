@@ -335,14 +335,13 @@ def return_fields(nums):
 
 
 class Player(BasePlayer):
+    score = models.IntegerField(default=0)
 
     def compute_score(self):
         current_score = 0
         fields = {key: value for (key, value) in self.__dict__.items() if key[0:2] == 'cb'}
 
-        # print(fields)
         current_constant = Constants.task_3_find[self.round_number - 1]
-        # print(self.participant.vars['shuffled_nums'])
         for index, num in enumerate(Constants.task_3_nums[self.round_number]):
             field_id = 'cb_' + str(index)
             if num == current_constant:
@@ -351,12 +350,8 @@ class Player(BasePlayer):
             else:
                 if fields[field_id] == 1:
                     current_score -= 1
-        # print(current_score)
 
-        if 'player_score' in self.participant.vars:
-            self.participant.vars['player_score'] += current_score
-        else:
-            self.participant.vars['player_score'] = current_score
+        self.score += current_score
 
     cb_0 = make_checkbox()
     cb_1 = make_checkbox()

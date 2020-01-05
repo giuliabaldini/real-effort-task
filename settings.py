@@ -17,8 +17,8 @@ SESSION_CONFIG_DEFAULTS = dict(
         template='global/mturk_template.html',
         minutes_allotted_per_assignment=60,
         expiration_hours=7 * 24,
-        qualification_requirements=[]
-        # grant_qualification_id='YOUR_QUALIFICATION_ID_HERE', # to prevent retakes
+        qualification_requirements=[],
+        grant_qualification_id='3L1AJVA23GBAEV215TS6UOUNIITYLD',  # to prevent retakes
     )
 )
 
@@ -26,16 +26,14 @@ SESSION_CONFIGS = [
     dict(
         name='effort_task',
         display_name="Real Effort Task",
-        num_demo_participants=100,
+        num_demo_participants=96,
         app_sequence=[
             'introduction',
             'assignment1',
-            'payoff_scramble',
             'assignment3',
-            'payoff_click',
             'payments'
         ],
-        participation_fee=2,
+        participation_fee=1,
         task_1_high_win=6,
         task_1_low_win=0,
         task_3_high_win=6,
@@ -45,7 +43,7 @@ SESSION_CONFIGS = [
         inc_1=1,
         dec_1=1,
         inc_2=1,
-        dec_2=2,
+        dec_2=1,
     ),
 ]
 
@@ -54,7 +52,7 @@ SESSION_CONFIGS = [
 LANGUAGE_CODE = 'en'
 
 # e.g. EUR, GBP, CNY, JPY
-REAL_WORLD_CURRENCY_CODE = 'EUR'
+REAL_WORLD_CURRENCY_CODE = 'USD'
 USE_POINTS = False
 
 ROOMS = []

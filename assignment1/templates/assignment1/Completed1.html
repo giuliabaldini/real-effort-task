@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Assignment 1 Completed
+{% endblock %}
+
+{% block content %}
+    <p>
+        You have now completed the first out of three assignments. On the next page you will receive instructions for
+        the second assignment.
+    </p>
+    {% next_button %}
+{% endblock %}
+
+
