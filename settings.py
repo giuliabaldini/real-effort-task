@@ -34,8 +34,8 @@ SESSION_CONFIGS = [
         num_demo_participants=96,
         app_sequence=[
             'introduction',
-            # 'assignment1',
-            # 'assignment2',
+            'assignment1',
+            'assignment2',
             'assignment3',
             'assignment4',
             'payments'
