@@ -19,13 +19,15 @@ class InstructionsAssignment3(Page):
         return {'form_label': form_label}
 
     def before_next_page(self):
-        self.participant.vars['expiry_total'] = time.time() + Constants.total_minutes * 60
+        self.participant.vars['expiry_total'] = time.time() + self.session.config['minutes_per_task'] * 60
 
 
 class Assignment3(Page):
     form_model = 'player'
-    timeout_seconds = Constants.seconds_per_round
     timer_text = 'Time left for this matrix:'
+
+    def get_timeout_seconds(self):
+        return self.session.config['seconds_per_round']
 
     def get_time_left(self):
         return self.participant.vars['expiry_total'] - time.time()

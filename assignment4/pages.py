@@ -17,8 +17,10 @@ class InstructionsAssignment4(Page):
 
 class Assignment4(Page):
     form_model = 'player'
-    timeout_seconds = Constants.seconds_per_round
     timer_text = 'Time left for this matrix:'
+
+    def get_timeout_seconds(self):
+        return self.session.config['seconds_per_round']
 
     def get_time_left(self):
         return self.participant.vars['expiry_total'] - time.time()

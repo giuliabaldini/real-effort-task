@@ -20,9 +20,6 @@ class Constants(BaseConstants):
     name_in_url = 'assignment3'
     players_per_group = None
 
-    total_minutes = 5  # Total duration
-    seconds_per_round = 20  # Duration of one round
-
     # TODO: Change this to change the example
     example = [123, 231, 952, 864, 123, 791, 283, 123, 641, 820, 462, 123]
 
@@ -733,7 +730,7 @@ class Constants(BaseConstants):
     task_3_find = [260, 996, 896, 710, 601, 330, 739, 297, 470, 300, 485, 827, 545, 867, 854, 168, 634, 233, 520, 959,
                    204, 188, 583, 389, 395, 137, 229, 791, 971, 362, 930, 699, 348, 469, 496, 541, 510, 510, 177, 490,
                    166, 630, 120, 709, 298, 243, 648, 354, 427, 475]
-    num_rounds = len(task_3_find)
+    num_rounds = 5  # len(task_3_find)
 
 
 class Subsession(BaseSubsession):

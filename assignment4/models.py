@@ -20,9 +20,6 @@ class Constants(BaseConstants):
     name_in_url = 'assignment4'
     players_per_group = None
 
-    total_minutes = 5  # Total duration
-    seconds_per_round = 20  # Duration of one round
-
     # TODO: Add the correct numbers for every round
     task_4_nums = {
         1: [608, 411, 271, 553, 200, 633, 721, 926, 768, 464, 462, 173, 543, 191, 588, 196, 975, 104, 153, 983, 339,
@@ -731,7 +728,7 @@ class Constants(BaseConstants):
                    983, 692, 672, 327, 575, 361, 407, 977, 203, 330, 917, 832, 480, 448, 731, 894, 976, 141, 387, 738,
                    387, 302, 600, 128, 861, 455, 843, 218, 386, 692]
 
-    num_rounds = len(task_4_find)
+    num_rounds = 5  # len(task_4_find)
 
 
 class Subsession(BaseSubsession):

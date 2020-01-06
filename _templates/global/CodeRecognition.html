@@ -1,0 +1,57 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block scripts %}
+    <script src="{% static 'global/js/disableFind.js' %}"></script>
+    <script src="{% static 'global/js/timeout.js' %}"></script>
+    <script>
+        $('label').disableFind();               // make all labels unsearchable
+        $(window).keydown(function (e) {
+            if ((e.ctrlKey || e.metaKey) && e.keyCode === 70) {
+                e.preventDefault();
+            }
+        });
+    </script>
+{% endblock %}
+
+{% block title %}
+    Code Recognition Task
+{% endblock %}
+
+{% block styles %}
+
+    <style type="text/css">
+        .checkboxes {
+            height: 51vh;
+            margin-bottom: 1vh;
+            margin-top: 1vh;
+        }
+    </style>
+    <link href="{% static 'global/css/all.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+    <input type="hidden" id="hidden_time" value="{{ expiry_total }}">
+
+    <div id="custom-timer" class="alert alert-warning">
+        <p>
+            Time left for this task: <span class="timer_total" style="font-weight: bold"></span>
+        </p>
+    </div>
+
+    <p>
+        The code you must check off is: <span class="highlight"> {{ find_num }} </span>
+    </p>
+
+    <div class="checkboxes flex-container">
+        {% for field, label in form_label %}
+            <div class="flex-item">
+                <input name={{ field }} id={{ field }} type="checkbox" value="1"/>
+                <label for={{ field }}>{{ label }}</label>
+            </div>
+        {% endfor %}
+    </div>
+    {% next_button %}
+
+{% endblock %}

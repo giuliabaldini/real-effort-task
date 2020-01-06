@@ -20,9 +20,6 @@ class Constants(BaseConstants):
     name_in_url = 'assignment2'
     players_per_group = None
 
-    total_minutes = 5  # Total duration
-    seconds_per_round = 20  # Duration of one round
-
     task_2 = [  # TODO: Change these to change the different sentences
         "strong shiny a was coat",
         "nice big a is night",
@@ -76,7 +73,7 @@ class Constants(BaseConstants):
         "thin old a was corridor",
     ]
 
-    num_rounds = len(task_2)
+    num_rounds = 5  # len(task_2)
 
 
 class Subsession(BaseSubsession):
