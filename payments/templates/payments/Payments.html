@@ -7,15 +7,15 @@
 
 {% block content %}
     <p>
-        You nave now completed your work on all three assignments. We will now explain now you will paid for
-        this work. After you have completed this HIT we will for each assignment match you with another
+        You nave now completed your work on all three assignments. We will now explain how you will paid for
+        this work. After you have completed this HIT we will, for each assignment, match you with another
         participant who has completed the same assignment. The payment to you and the other participant is
         determined by a two-stage process. Below we explain this process in more detail.
     </p>
     <span><b>First Stage:</b></span>
     <p>
         Assignment 1: For this assignment, your earnings are determined by a lottery where each of you wins with
-        equal probability earns {{ max_draw }} or {{ min_draw }}.
+        equal probability {{ max_draw }} or {{ min_draw }}.
     </p>
     <p>
         Assignment 2: For this assignment, your earnings are determined in the same way as for assignment 1.
@@ -24,6 +24,9 @@
         Assignment 3: For this assignment, your earnings are determined by how productive you are. The
         participant with the highest score earns {{ high_score }} and the other participant earns {{ low_score }}. If
         you both have the same score, you will be matched with another participant.
+    </p>
+    <p>
+        Assignment 4: For this assignment, your earnings are determined in the same way as for assignment 3.
     </p>
     <span><b>Second Stage:</b></span>
     <p>
@@ -37,7 +40,8 @@
         earns {{ red_low }}. If the third person chooses not to redistribute, each of you will be paid your earnings
         from the assignment. If the third person chooses to redistribute earnings for assignment 1 and 3, increasing the
         payment of the participant with the low earnings by {{ inc_1 }} decreases the other participant's payment by
-        {{ dec_1 }}. For assignment 2, increasing the payment ot the participant with the low earnings by {{ inc_2 }} will
+        {{ dec_1 }}. For assignment 2 and 4, increasing the payment ot the participant with the low earnings by {{ inc_2 }}
+        will
         decrease the other participants's payment by {{ dec_2 }}.
     </p>
     <p>

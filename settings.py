@@ -6,7 +6,7 @@ from os import environ
 # e.g. self.session.config['participation_fee']
 
 SESSION_CONFIG_DEFAULTS = dict(
-    real_world_currency_per_point=1.00,
+    real_world_currency_per_point=0.16666666666,
     participation_fee=1.00,
     doc="",
     mturk_hit_settings=dict(
@@ -16,7 +16,7 @@ SESSION_CONFIG_DEFAULTS = dict(
         frame_height=500,
         template='global/mturk_template.html',
         minutes_allotted_per_assignment=60,
-        expiration_hours=7 * 24,
+        expiration_hours=30 * 24,
         qualification_requirements=[
             {
                 'QualificationTypeId': "3L1AJVA23GBAEV215TS6UOUNIITYLD",
@@ -58,7 +58,7 @@ LANGUAGE_CODE = 'en'
 
 # e.g. EUR, GBP, CNY, JPY
 REAL_WORLD_CURRENCY_CODE = 'USD'
-USE_POINTS = False
+USE_POINTS = True
 
 ROOMS = []
 
