@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block styles %}
+{% endblock %}
+
+{% block title %}
+    Instructions Assignment 2
+{% endblock %}
+
+{% block content %}
+    <p>
+        In the second assignment you are once again asked to work on a sentence unscrambling task for 5 minutes.
+        As before, your answer will be submitted automatically after 20 seconds and you will auto-advance to
+        five new words.
+    </p>
+    <p>
+        Your performance will still not be measured as there is no right or wrong answer, but we do ask you to work
+        continuously on this assignment as well.
+    </p>
+    <p>
+        Press Next to start the second assignment.
+    </p>
+
+    {% next_button %}
+
+{% endblock %}

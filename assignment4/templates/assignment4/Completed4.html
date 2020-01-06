@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Assignment 4 Completed
+{% endblock %}
+
+{% block content %}
+    <p>
+        You have now completed the fourth and final assignment. Your total score on assignment 4 is {{ score }}.
+    </p>
+    <p>
+        Press Next to continue to the next part of the experiment.
+    </p>
+    {% next_button %}
+{% endblock %}
+
+

@@ -1,0 +1,37 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block styles %}
+
+{% endblock %}
+
+{% block title %}
+    Instructions Assignment 4
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        In the fourth assignment you are once again asked to work on a code recognition task for 5 minutes. For this
+        assignment we will measure your performance by the number points you receive. You will be informed
+        about your score at the end of the assignment.
+    </p>
+    <p>
+        On top ot the page you will be shown a 3-digit code that you must find and check off from a matrix of 3-digit
+        codes in random order. The assigned code will occur multiple times in the same matrix and you will be given 1
+        point for each correct marking.
+        You will be subtracted 1 point if you check off a wrong code,
+        but you will not lose any points for failing to check off all occurrences of the correct code.
+    </p>
+    <p>
+        Your matrix will be submitted automatically after 60 seconds and you will auto advance to the next
+        page. This assignment will last for 5 minutes and after 5 minutes you will be taken to the second part of the
+        experiment.
+    </p>
+
+    <p>
+        Press Next to start the fourth assignment.
+    </p>
+    {% next_button %}
+
+{% endblock %}

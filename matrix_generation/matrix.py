@@ -35,7 +35,7 @@ def print_checkbox(num):
         print("cb_" + str(i) + " = make_checkbox()")
 
 
-rounds = 20
+rounds = 50
 max_size = 17 * 17
 generate_matrix(max_size, rounds)
 print_checkbox(max_size)

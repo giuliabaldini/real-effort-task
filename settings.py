@@ -35,10 +35,11 @@ SESSION_CONFIGS = [
         app_sequence=[
             'introduction',
             'assignment1',
+            'assignment2',
             'assignment3',
+            'assignment4',
             'payments'
         ],
-        participation_fee=1,
         task_1_high_win=6,
         task_1_low_win=0,
         task_3_high_win=6,
