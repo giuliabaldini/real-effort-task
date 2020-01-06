@@ -12,7 +12,7 @@ class InstructionsAssignment4(Page):
         return self.player.round_number == 1
 
     def before_next_page(self):
-        self.participant.vars['expiry_total'] = time.time() + Constants.total_minutes * 60
+        self.participant.vars['expiry_total'] = time.time() + self.session.config['minutes_per_task'] * 60
 
 
 class Assignment4(Page):
@@ -47,7 +47,10 @@ class Completed4(Page):
         return self.player.round_number == Constants.num_rounds
 
     def vars_for_template(self):
-        return {'score': self.player.score}
+        return {'score': self.participant.vars['player_score4']}
+
+    def before_next_page(self):
+        self.player.score = self.participant.vars['player_score4']
 
 
 page_sequence = [

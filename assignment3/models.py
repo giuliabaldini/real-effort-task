@@ -769,10 +769,10 @@ class Player(BasePlayer):
             else:
                 if fields[field_id] == 1:
                     current_score -= 1
-        if self.round_number == 1:
-            self.score = current_score
+        if 'player_score3' not in self.participant.vars:
+            self.participant.vars['player_score3'] = current_score
         else:
-            self.score = self.in_round(self.round_number - 1).score + current_score
+            self.participant.vars['player_score3'] += current_score
 
     cb_0 = make_checkbox()
     cb_1 = make_checkbox()

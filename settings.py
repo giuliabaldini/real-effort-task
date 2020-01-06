@@ -34,14 +34,14 @@ SESSION_CONFIGS = [
         num_demo_participants=96,
         app_sequence=[
             'introduction',
-            'assignment1',
-            'assignment2',
+            # 'assignment1',
+            # 'assignment2',
             'assignment3',
             'assignment4',
             'payments'
         ],
         seconds_per_round=20,  # Duration of one round
-        minutes_per_task=5,  # Total duration
+        minutes_per_task=1,  # Total duration
         task_1_high_win=6,
         task_1_low_win=0,
         task_3_high_win=6,

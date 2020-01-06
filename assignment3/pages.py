@@ -54,7 +54,10 @@ class Completed3(Page):
         return self.player.round_number == Constants.num_rounds
 
     def vars_for_template(self):
-        return {'score': self.player.score}
+        return {'score': self.participant.vars['player_score3']}
+
+    def before_next_page(self):
+        self.player.score = self.participant.vars['player_score3']
 
 
 page_sequence = [
