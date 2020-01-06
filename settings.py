@@ -7,18 +7,18 @@ from os import environ
 
 SESSION_CONFIG_DEFAULTS = dict(
     real_world_currency_per_point=1.00,
-    participation_fee=0.00,
+    participation_fee=1.00,
     doc="",
     mturk_hit_settings=dict(
-        keywords='bonus, study',
-        title='Title for your experiment',
-        description='Description for your experiment',
+        keywords='study, effort, economic, behaviour',
+        title='Real Effort Task',
+        description='Four effort task.',
         frame_height=500,
         template='global/mturk_template.html',
         minutes_allotted_per_assignment=60,
         expiration_hours=7 * 24,
         qualification_requirements=[],
-        grant_qualification_id='3L1AJVA23GBAEV215TS6UOUNIITYLD',  # to prevent retakes
+        grant_qualification_id='3L1AJVA23GBAEV215TS6UOUNIITYLD',  # To prevent retakes
     )
 )
 

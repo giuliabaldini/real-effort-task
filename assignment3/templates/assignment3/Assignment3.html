@@ -2,7 +2,11 @@
 {% load otree static %}
 
 {% block scripts %}
+    <script src="{% static 'global/js/disableFind.js' %}"></script>
     <script src="{% static 'global/js/timeout.js' %}"></script>
+    <script>
+        $('.label').disableFind();               // make all labels unsearchable
+    </script>
 {% endblock %}
 
 {% block title %}

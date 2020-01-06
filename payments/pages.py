@@ -23,6 +23,12 @@ class Feedback(Page):
     form_fields = ['feedback']
 
 
+class Completion(Page):
+    pass
+
+
 page_sequence = [
     Payments,
-    Feedback]
+    Feedback,
+    Completion,
+]

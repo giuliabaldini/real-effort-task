@@ -6,4 +6,10 @@ from .models import Constants
 
 class PlayerBot(Bot):
     def play_round(self):
-        pass
+        if self.round_number == 1:
+            yield pages.InstructionsAssignment3
+
+        yield pages.Assignment3
+
+        if self.round_number == Constants.num_rounds:
+            yield pages.Completed3
