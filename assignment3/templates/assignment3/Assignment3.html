@@ -5,7 +5,12 @@
     <script src="{% static 'global/js/disableFind.js' %}"></script>
     <script src="{% static 'global/js/timeout.js' %}"></script>
     <script>
-        $('.label').disableFind();               // make all labels unsearchable
+        $('label').disableFind();               // make all labels unsearchable
+        $(window).keydown(function (e) {
+            if ((e.ctrlKey || e.metaKey) && e.keyCode === 70) {
+                e.preventDefault();
+            }
+        });
     </script>
 {% endblock %}
 
