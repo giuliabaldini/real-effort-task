@@ -728,7 +728,7 @@ class Constants(BaseConstants):
                    983, 692, 672, 327, 575, 361, 407, 977, 203, 330, 917, 832, 480, 448, 731, 894, 976, 141, 387, 738,
                    387, 302, 600, 128, 861, 455, 843, 218, 386, 692]
 
-    num_rounds = 5  # len(task_4_find)
+    num_rounds = len(task_4_find)
 
 
 class Subsession(BaseSubsession):

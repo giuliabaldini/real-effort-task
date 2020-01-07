@@ -73,7 +73,7 @@ class Constants(BaseConstants):
         "awful night the is pigs",
     ]
 
-    num_rounds = 5  # len(task_1)
+    num_rounds = len(task_1)
 
 
 class Subsession(BaseSubsession):

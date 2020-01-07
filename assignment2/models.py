@@ -73,7 +73,7 @@ class Constants(BaseConstants):
         "thin old a was corridor",
     ]
 
-    num_rounds = 5  # len(task_2)
+    num_rounds = len(task_2)
 
 
 class Subsession(BaseSubsession):
