@@ -9,8 +9,8 @@ class Payments(Page):
                 'max_draw': c(self.participant.session.config['task_1_high_win']),
                 'high_score': c(self.participant.session.config['task_3_high_win']),
                 'low_score': c(self.participant.session.config['task_3_low_win']),
-                'red_high': c(self.participant.session.config['high_win']),
-                'red_low': c(self.participant.session.config['low_win']),
+                'high_win': c(self.participant.session.config['high_win']),
+                'low_win': c(self.participant.session.config['low_win']),
                 'increase': c(self.participant.session.config['increase']),
                 'decrease': c(self.participant.session.config['decrease']),
                 'participation': self.session.config['participation_fee']}

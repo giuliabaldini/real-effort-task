@@ -33,11 +33,11 @@ SESSION_CONFIGS = [
         display_name="Real Effort Task",
         num_demo_participants=96,
         app_sequence=[
-            'introduction',
-            'assignment1',
-            'assignment2',
-            'assignment3',
-            'assignment4',
+            # 'introduction',
+            # 'assignment1',
+            # 'assignment2',
+            # 'assignment3',
+            # 'assignment4',
             'payments'
         ],
         seconds_per_round=20,  # Duration of one round
