@@ -11,7 +11,6 @@ def generate_three_digit_codes(total):
         new_num = random.randint(100, 999)
         final.append(new_num)
 
-    print(rep_num)
     for _ in range(0, rep_num):
         rand_pos = random.randint(0, total - 1)
         final[rand_pos] = find_num
@@ -35,7 +34,7 @@ def print_checkbox(num):
         print("cb_" + str(i) + " = make_checkbox()")
 
 
-rounds = 50
+rounds = 100
 max_size = 17 * 17
 generate_matrix(max_size, rounds)
 print_checkbox(max_size)
