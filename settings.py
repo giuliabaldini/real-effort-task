@@ -33,12 +33,12 @@ SESSION_CONFIGS = [
         display_name="Real Effort Task",
         num_demo_participants=96,
         app_sequence=[
-            # 'introduction',
-            # 'assignment1',
-            # 'assignment2',
+            'introduction',
+            'assignment1',
+            'assignment2',
             'assignment3',
-            # 'assignment4',
-            # 'payments'
+            'assignment4',
+            'payments'
         ],
         seconds_per_round=20,  # Duration of one round
         minutes_per_task=5,  # Total duration
@@ -61,7 +61,7 @@ ROOMS = []
 
 ADMIN_USERNAME = 'GBMBMF'
 # for security, best to set admin password in an environment variable
-ADMIN_PASSWORD = 'gH42MoGTX'  # environ.get('OTREE_ADMIN_PASSWORD')
+ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
 
 # OTREE_PRODUCTION = 1
 # OTREE_AUTH_LEVEL = 'DEMO'
