@@ -1,9 +1,10 @@
 import random
-
+import json
+import sys
 
 def generate_three_digit_codes(total):
     rep_num = random.randint(1, 10)
-
+    print(rep_num)
     find_num = random.randint(100, 999)
 
     final = []
@@ -25,8 +26,7 @@ def generate_matrix(total_mat, rounds):
         nums[i], find = generate_three_digit_codes(total_mat)
         finds.append(find)
 
-    print(nums)
-    print(finds)
+    return nums, finds
 
 
 def print_checkbox(num):
@@ -34,7 +34,12 @@ def print_checkbox(num):
         print("cb_" + str(i) + " = make_checkbox()")
 
 
-rounds = 100
+rounds = int(sys.argv[1])
 max_size = 17 * 17
-generate_matrix(max_size, rounds)
-print_checkbox(max_size)
+nums, finds = generate_matrix(max_size, rounds)
+#print_checkbox(max_size)
+
+with open('matrix_ass' + sys.argv[2] + '.json', 'w') as f:
+    json.dump(nums, f)
+
+print(finds)

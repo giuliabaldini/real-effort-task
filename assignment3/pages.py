@@ -37,10 +37,10 @@ class Assignment3(Page):
         return self.get_time_left() > 3
 
     def get_form_fields(self):
-        return return_fields(Constants.task_3_nums[self.player.round_number])
+        return return_fields(self.session.vars['task_3_nums'][str(self.player.round_number)])
 
     def vars_for_template(self):
-        curr_nums = Constants.task_3_nums[self.player.round_number]
+        curr_nums = self.session.vars['task_3_nums'][str(self.player.round_number)]
         form_label = zip(self.get_form_fields(), curr_nums)
         num = Constants.task_3_find[self.player.round_number - 1]
         return {'form_label': form_label, 'find_num': num, 'expiry_total': self.participant.vars['expiry_total']}
