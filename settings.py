@@ -42,10 +42,6 @@ SESSION_CONFIGS = [
         ],
         seconds_per_round=20,  # Duration of one round
         minutes_per_task=5,  # Total duration
-        task_1_high_win=6,
-        task_1_low_win=0,
-        task_3_high_win=6,
-        task_3_low_win=0,
         high_win=6,
         low_win=0,
         increase=1,
