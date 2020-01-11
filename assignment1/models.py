@@ -71,16 +71,6 @@ class Constants(BaseConstants):
         "blue hotel the is coats",
         "odorous room the were rooms",
         "lovely hospital the is coats",
-        "orange kind a is street",
-        "lovely boring a was statue",
-        "awesome heavy a was room",
-        "lovely old a is cat",
-        "thin angry a was statue",
-        "teachers the thin are young",
-        "pigs the brown are green",
-        "houses the joyous were beautiful",
-        "statues the joyous are smelly",
-        "tables the rude were weak",
     ]
 
     num_rounds = len(task_1)

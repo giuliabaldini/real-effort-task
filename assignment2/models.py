@@ -71,16 +71,6 @@ class Constants(BaseConstants):
         "purple sad a is bag",
         "fat weak a was village",
         "fat big a is rooom",
-        "purple colorful a is rooom",
-        "huge boring a was plane",
-        "blue big a was bird",
-        "red colorful a was night",
-        "white angry a is rabbit",
-        "rude stupid a is cow",
-        "blue kind a was coat",
-        "nice sad a is plane",
-        "purple happy a was village",
-        "blue colorful a is house",
     ]
 
     num_rounds = len(task_2)
