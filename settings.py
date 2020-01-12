@@ -31,7 +31,7 @@ SESSION_CONFIGS = [
     dict(
         name='effort_task',
         display_name="Real Effort Task",
-        num_demo_participants=96,
+        num_demo_participants=1,
         app_sequence=[
             'introduction',
             'assignment1',
@@ -41,7 +41,8 @@ SESSION_CONFIGS = [
             'payments'
         ],
         seconds_per_round=20,  # Duration of one round
-        minutes_per_task=5,  # Total duration
+        seconds_per_round_matrix=60,  # Duration of one matrix round
+        minutes_per_task=1,  # Total duration
         high_win=6,
         low_win=0,
         increase=1,

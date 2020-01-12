@@ -13,7 +13,10 @@ class Payments(Page):
                 'low_win': c(self.participant.session.config['low_win']),
                 'increase': c(self.participant.session.config['increase']),
                 'decrease': c(self.participant.session.config['decrease']),
-                'participation': self.session.config['participation_fee']}
+                'participation': self.session.config['participation_fee'],
+                'conversion': c(1 / self.session.config['real_world_currency_per_point']),
+                'dollar': '$1'
+                }
 
 
 class Feedback(Page):

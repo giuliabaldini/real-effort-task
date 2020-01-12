@@ -11,6 +11,10 @@ class InstructionsAssignment4(Page):
     def is_displayed(self):
         return self.player.round_number == 1
 
+    def vars_for_template(self):
+        return {'conversion': c(1 / self.session.config['real_world_currency_per_point']),
+                'dollar': '$1'}
+
     def before_next_page(self):
         self.participant.vars['expiry_total'] = time.time() + self.session.config['minutes_per_task'] * 60
 
@@ -20,7 +24,7 @@ class Assignment4(Page):
     timer_text = 'Time left for this matrix:'
 
     def get_timeout_seconds(self):
-        return self.session.config['seconds_per_round']
+        return self.session.config['seconds_per_round_matrix']
 
     def get_time_left(self):
         return self.participant.vars['expiry_total'] - time.time()

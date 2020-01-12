@@ -16,7 +16,8 @@ class InstructionsAssignment3(Page):
 
     def vars_for_template(self):
         form_label = zip(self.get_form_fields(), Constants.example)
-        return {'form_label': form_label}
+        return {'form_label': form_label, 'conversion': c(1 / self.session.config['real_world_currency_per_point']),
+                'dollar': '$1'}
 
     def before_next_page(self):
         self.participant.vars['expiry_total'] = time.time() + self.session.config['minutes_per_task'] * 60
@@ -27,7 +28,7 @@ class Assignment3(Page):
     timer_text = 'Time left for this matrix:'
 
     def get_timeout_seconds(self):
-        return self.session.config['seconds_per_round']
+        return self.session.config['seconds_per_round_matrix']
 
     def get_time_left(self):
         return self.participant.vars['expiry_total'] - time.time()
